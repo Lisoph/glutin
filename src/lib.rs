@@ -94,6 +94,8 @@ pub use winit::{
     WindowId,
 };
 
+pub use winit::dpi;
+
 use std::io;
 
 mod api;

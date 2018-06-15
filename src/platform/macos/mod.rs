@@ -44,7 +44,7 @@ impl Context {
         gl_attr: &GlAttributes<&Context>,
     ) -> Result<(winit::Window, Self), CreationError>
     {
-        let transparent = window_builder.window.transparent;
+        let transparent = window_builder.window.transparent || window_builder.window.blur;
         let window = window_builder.build(events_loop)?;
 
         if gl_attr.sharing.is_some() {
